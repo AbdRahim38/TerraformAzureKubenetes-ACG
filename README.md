@@ -37,7 +37,9 @@ Create Storage Account in Azure Sandbox. Take note of the following informations
 
 Next run below command in Azure CLI by replacing <YourAzureStorageAccountName> and <YourAzureStorageAccountKey> after successfully creating the Storage Account
   
-  `az storage container create -n tfstate --account-name <YourAzureStorageAccountName> --account-key <YourAzureStorageAccountKey>`
+  ```javascript
+  az storage container create -n tfstate --account-name <YourAzureStorageAccountName> --account-key <YourAzureStorageAccountKey>
+  ```
   
   ![azure-kubenetes1](https://user-images.githubusercontent.com/97861554/157278624-1d40179c-fbb8-4490-85aa-b817b70c562f.png)
 
@@ -47,14 +49,18 @@ Next run below command in Azure CLI by replacing <YourAzureStorageAccountName> a
   a. Terraform Init
   Run below command in Azure CLI by replacing <YourAzureStorageAccountName> and <YourAzureStorageAccountKey> from step #6
   
-  `terraform init -backend-config="storage_account_name=<YourAzureStorageAccountName>" -backend-config="container_name=tfstate" -backend-config="access_key=<YourStorageAccountAccessKey>" -backend-config="key=codelab.microsoft.tfstate"`
+  ```javascript
+  terraform init -backend-config="storage_account_name=<YourAzureStorageAccountName>" -backend-config="container_name=tfstate" -backend-config="access_key=<YourStorageAccountAccessKey>" -backend-config="key=codelab.microsoft.tfstate"
+  ```
   
   ![azure-kubenetes2](https://user-images.githubusercontent.com/97861554/157278635-94213092-ed86-48e0-8e29-d2c7a42eba5b.png)
   
   b. Terraform plan
   Run below command in Azure CLI after successfully with init in step #7a
   
-  `terraform plan -out out.plan`
+  ```javascript
+  terraform plan -out out.plan
+  ```  
   
   ![azure-kubenetes3](https://user-images.githubusercontent.com/97861554/157278649-f766e4f1-3fe3-4e85-bd6e-a7001111a41f.png)
   ![azure-kubenetes4](https://user-images.githubusercontent.com/97861554/157278660-9ea00359-74e5-41e3-ba8f-728bdb72f04a.png)
@@ -62,7 +68,9 @@ Next run below command in Azure CLI by replacing <YourAzureStorageAccountName> a
   c. Terraform apply
   Run below command in Azure CLI after successfully with plan in step #7b
   
-  'terraform apply out.plan'
+  ```javascript
+  terraform apply out.plan
+  ```    
   
   ![azure-kubenetes5](https://user-images.githubusercontent.com/97861554/157278665-5ee90401-d7c2-4966-9f52-8cc9c8138e46.png)
 
