@@ -7,8 +7,8 @@ Create a Kubernetes cluster with Azure Kubernetes Service using Terraform
 - ACLOUDGURU Azure Cloud Sandbox account
 - macOS Monterey v12.1, Apple M1 Pro
 - Visual Studio Code v1.64.2
-- Azure CLI v
-- Terraform v
+- Azure CLI v2.33.1
+- Terraform v1.1.7
 - Original documentation from https://docs.microsoft.com/en-us/azure/developer/terraform/create-k8s-cluster-with-tf-and-aks
 
 
